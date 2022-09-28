@@ -1,7 +1,7 @@
 Feature: Pegasus website functionality
 
 Scenario:Order tickets
-  Given Go to Website
+  Given Fly to Website
   Then Choose one way
   And Decide where to go
   Then Click the search flight button

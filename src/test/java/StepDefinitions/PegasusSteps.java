@@ -32,8 +32,8 @@ public class PegasusSteps extends GWD {
     }
 
 
-    @Given("Go to Website")
-    public void goToWebsite() {
+    @Given("Fly to Website")
+    public void flyToWebsite() {
 
         GWD.getDriver().get("https://www.flypgs.com/");
 
