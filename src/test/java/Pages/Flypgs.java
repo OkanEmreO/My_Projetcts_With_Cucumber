@@ -128,6 +128,9 @@ public class Flypgs extends Parent{
     @FindBy(xpath = "//button/div[text()='ÖDEMEYE DEVAM']")
     private WebElement ödemeYap;
 
+    @FindBy(xpath = "//div[text()='Ödeme Şeklini Seçiniz']")
+    private WebElement odemeAlani;
+
 
 
     WebElement myElement;
@@ -194,7 +197,7 @@ public class Flypgs extends Parent{
         // burda string isimden weblemente ulaşıcam
         switch (strElement)
         {
-//            case "siyarRenk" : myElement =siyarRenk; break;
+            case "odemeAlani" : myElement =odemeAlani; break;
 
         }
 

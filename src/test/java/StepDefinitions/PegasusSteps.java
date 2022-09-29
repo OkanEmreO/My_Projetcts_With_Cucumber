@@ -62,7 +62,7 @@ public class PegasusSteps extends GWD {
         fly.findAndSend("sehirsec2", "Abudhabi");
         fly.findAndClick("abudhabi");
         fly.findAndClick("calendar");
-        fly.findAndClick("calendarnext");
+//        fly.findAndClick("calendarnext"); -- takvim ileri attığı için yeri değişti,
         fly.findAndClick("sixthday");
 
     }
@@ -95,8 +95,6 @@ public class PegasusSteps extends GWD {
         Bekleme(1);
 
         fly.findAndClick("mesajdvm");
-
-
     }
 
     @Then("Enter your personal information")
@@ -135,23 +133,29 @@ public class PegasusSteps extends GWD {
 
         fly.findAndClick("sUcus");
 
-        Bekleme(2);
+    }
+
+    @And("User should be continue with next steps")
+    public void userShouldBeContinueWithNextSteps() throws InterruptedException {
+
+
+        Bekleme(1);
 
         fly.findAndClick("ymkDevam");
 
-        Bekleme(2);
+        Bekleme(1);
 
         fly.findAndClick("mesajdvm");
 
-        Bekleme(2);
+        Bekleme(1);
 
         fly.findAndClick("sUcus");
 
-        Bekleme(2);
+        Bekleme(1);
 
         fly.findAndClick("bagajDevam");
 
-        Bekleme(2);
+        Bekleme(1);
 
         fly.findAndClick("tekbgj");
 
@@ -161,5 +165,15 @@ public class PegasusSteps extends GWD {
 
         fly.findAndClick("ödemeYap");
 
+
     }
+
+    @Then("User should be display succes or not for the Fly")
+    public void userShouldBeDisplaySuccesOrNotForTheFly() {
+
+        fly.findAndContainsText("odemeAlani", "Ödeme Şeklini Seçiniz");
+
+    }
+
+
 }
