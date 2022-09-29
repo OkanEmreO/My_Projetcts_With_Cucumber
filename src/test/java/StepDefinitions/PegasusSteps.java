@@ -24,7 +24,6 @@ public class PegasusSteps extends GWD {
     Actions actions = new Actions(getDriver());
 
 
-
     Robot rbt = new Robot();
 
 
@@ -41,78 +40,44 @@ public class PegasusSteps extends GWD {
 
         GWD.getDriver().manage().deleteAllCookies();
 
-//        rbt.keyPress(KeyEvent.VK_TAB);
-//        rbt.keyRelease(KeyEvent.VK_TAB);
-//
-//        rbt.keyPress(KeyEvent.VK_TAB);
-//        rbt.keyRelease(KeyEvent.VK_TAB);
-//
-//        rbt.keyPress(KeyEvent.VK_ENTER);
-//        rbt.keyRelease(KeyEvent.VK_ENTER);
-
 
     }
 
     @Then("Choose one way")
-    public void chooseOneWay(){
-
-
+    public void chooseOneWay() {
         fly.findAndClick("acceptCookie");
 
-
-
-
         fly.findAndClick("oneway");
-
-
-
-
     }
 
     @And("Decide where to go")
     public void decideWhereToGo() throws InterruptedException {
 
         fly.findAndClick("nereden");
-        fly.findAndSend("sehirsec","ams");
+        fly.findAndSend("sehirsec", "ams");
         Bekleme(2);
         fly.findAndClick("amsterdam");
-
         Bekleme(1);
-
-//        fly.findAndClick("scrollup");
-
-
         fly.findAndClick("wheretoGo");
-        fly.findAndSend("sehirsec2","Abudhabi");
+        fly.findAndSend("sehirsec2", "Abudhabi");
         fly.findAndClick("abudhabi");
-
-//        fly.findAndClick("scrollup");
         fly.findAndClick("calendar");
-        fly.findAndClick("aysonu");
+        fly.findAndClick("calendarnext");
+        fly.findAndClick("sixthday");
 
     }
 
     @Then("Click the search flight button")
     public void clickTheSearchFlightButton() throws InterruptedException {
-//        fly.findAndClick("scrollup");
         Bekleme(2);
         fly.findAndClick("searchbutton");
 
-        try {
+        if (fly.tekrardene.isDisplayed()) {
+
             fly.findAndClick("tekrardene");
-        }catch (WebDriverException e){
-            fly.findAndClick("tekrardene");
+
         }
 
-//        if(fly.tekrardene.isDisplayed()){
-//
-//
-//        }
-
-
-
-
-//        Bekleme(5);
     }
 
     @And("Choose your flight type")
@@ -139,30 +104,30 @@ public class PegasusSteps extends GWD {
 
         try {
             fly.findAndClick("misafirgiris");
-        }catch (ElementClickInterceptedException e){
+        } catch (ElementClickInterceptedException e) {
             fly.findAndClick("misafir");
         }
-        fly.findAndSend("name","Mustafa");
+        fly.findAndSend("name", "Mustafa");
 
-        fly.findAndSend("lastname","Ceylan");
+        fly.findAndSend("lastname", "Ceylan");
 
-        fly.findAndSend("birthday","10");
+        fly.findAndSend("birthday", "10");
 
-        fly.findAndSend("birthmounth","10");
+        fly.findAndSend("birthmounth", "10");
 
-        fly.findAndSend("birthyear","1990");
+        fly.findAndSend("birthyear", "1990");
 
         fly.findAndClick("gendermale");
 
-        fly.findAndSend("firstelarea","555");
+        fly.findAndSend("firstelarea", "555");
 
-        fly.findAndSend("telarea","5555555");
+        fly.findAndSend("telarea", "5555555");
 
         fly.findAndClick("anothercountry");
 
         fly.findAndClick("devamet2");
 
-        fly.findAndSend("eposta","mustafa.cceylan@gmail.com");
+        fly.findAndSend("eposta", "mustafa.cceylan@gmail.com");
 
         fly.findAndClick("devamet2");
 

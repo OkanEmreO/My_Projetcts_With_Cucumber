@@ -42,8 +42,8 @@ public class Flypgs extends Parent{
     @FindBy(xpath = "(//a[@title=\"ileri>\"])[1]")
     private WebElement calendarnext;
 
-    @FindBy(xpath = "//td[@data-month='8']/a[text()='29']")
-    private WebElement aysonu;
+    @FindBy(xpath = "//td[@data-month='9']/a[text()='6']")
+    private WebElement sixthday;
 
     @FindBy(xpath = "//button[text()='Ucuz Uçuş Ara']")
     private WebElement searchbutton;
@@ -141,7 +141,7 @@ public class Flypgs extends Parent{
             case "wheretoGo": myElement=wheretoGo;break;
             case "calendar": myElement=calendar;break;
             case "calendarnext": myElement=calendarnext;break;
-            case "aysonu" : myElement=aysonu;break;
+            case "sixthday" : myElement=sixthday;break;
             case "searchbutton": myElement=searchbutton;break;
             case "acceptCookie": myElement=acceptCookie;break;
             case "amsterdam": myElement=amsterdam;break;
